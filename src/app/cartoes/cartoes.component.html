@@ -1,0 +1,27 @@
+<div class='container'>
+  <h1 class='text-center'>Cartões</h1>
+  <button class="btn btn-primary" (click)="deslogar()">Deslogar</button>
+
+      <table class='table is-bordered'>
+        <thead>
+          <tr>
+            <th class='center-align bordas-titulo'>Numero</th>
+            <th class='center-align bordas-titulo'>Data Vencimento</th>
+            <th class='center-align bordas-titulo'>CVV</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let cartao of cartoes'>
+            <td class='center-align'>
+              {{cartao.number}}
+            </td>
+            <td class='center-align'>
+              {{cartao.expiration_month}}/{{cartao.expiration_year}}
+            </td>
+            <td class='center-align'>
+              {{cartao.cvv}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

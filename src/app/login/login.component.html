@@ -1,0 +1,8 @@
+<form class='container text-center' #form="ngForm">
+  <div>
+    <img src='https://privacy.google.com/images/animations/your-security/last-frame-1.svg'>
+  </div>
+  <input class='input email-input' type='text' name="username" [(ngModel)]="usuario.username" placeholder='Login' required>
+  <input class='input password-input' type='text' name="password" [(ngModel)]="usuario.password" placeholder='Senha' required>
+  <button class='btn btn-primary' (click)="autenticar($event)">Entrar</button>
+</form>
